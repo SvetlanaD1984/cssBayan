@@ -1,84 +1,103 @@
-body {
-    margin: 0;
-    font-family: "Inika", serif;
-}
-
-p,
-h1,
-h2,
-h3 {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 100%;
-    max-width: 1700px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.accordeon__title {
-    cursor: pointer;
-}
-
-.accordeon {
-    width: 500px;
-}
-
-.accordeon__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.accordeon__item:hover .accordeon__symbol {
-    background-color: black;
-    width: 20px;
-    height: 5px;
-    transition: 0.5s;
-}
-
-.accordeon__item:hover .accordeon__img {
-    display: block;
-    transition: 0.5s;
-}
-
-.accordeon__img {
-    display: none;
-    height: 300px;
-}
-
-.accordeon__symbol {
-    background-color: green;
-    width: 20px;
-    height: 20px;
-    transition: 0.3s;
-}
-
-input[name="text"]:checked~.accordeon__img {
-    display: block;
-    transition: 0.5s;
-}
-
-input {
-    display: none;
-}
-
-input[name="text"]:checked~.accordeon__wrapper .accordeon__symbol {
-    background-color: black;
-    width: 20px;
-    height: 5px;
-    transition: 0.3s;
-}
-
-label:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    transition: 0.3s;
-}
+                        body {
+                            margin: 0;
+                            font-family: "Inika", serif;
+                        }
+                        
+                        p,
+                        h1,
+                        h2,
+                        h3 {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        .container {
+                            width: 100%;
+                            max-width: 1700px;
+                            margin: 0 auto;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                        
+                        .accordeon {
+                            width: 500px;
+                        }
+                        
+                        .accordeon__title {
+                            cursor: pointer;
+                            text-decoration: none;
+                            color: blue;
+                        }
+                        
+                        .accordeon__wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        
+                        .accordeon__img_wrapper {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        .accordeon__item:hover .accordeon__title {
+                            color: black;
+                        }
+                        
+                        .accordeon__item:hover .accordeon__symbol {
+                            background-color: black;
+                            width: 20px;
+                            height: 5px;
+                            transition: 0.5s;
+                        }
+                        
+                        .accordeon__item:hover .accordeon__img {
+                            display: block;
+                            transition: 0.5s;
+                            width: 200px;
+                            height: 200px;
+                        }
+                        
+                        .accordeon__img {
+                            display: none;
+                            height: 0px;
+                            width: 0px;
+                            transition: 0.5s;
+                        }
+                        
+                        .accordeon__symbol {
+                            background-color: green;
+                            width: 20px;
+                            height: 20px;
+                            transition: 0.5s;
+                        }
+                        
+                        input[name="text"]:checked~.accordeon__img {
+                            display: block;
+                            width: 100px;
+                            height: 100px;
+                        }
+                        
+                        input {
+                            display: none;
+                        }
+                        
+                        input[name="text"]:checked~.accordeon__wrapper .accordeon__symbol {
+                            background-color: black;
+                            width: 20px;
+                            height: 5px;
+                        }
+                        
+                        input[name="text"]:checked~.accordeon__wrapper .accordeon__title {
+                            color: black;
+                        }
+                        
+                        label:before {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: black;
+                            color: black;
+                        }
