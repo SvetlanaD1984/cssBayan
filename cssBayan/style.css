@@ -1,3 +1,25 @@
+body {
+    margin: 0;
+    font-family: "Inika", serif;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .accordeon__title {
     cursor: pointer;
 }
@@ -13,11 +35,15 @@
 }
 
 .accordeon__item:hover .accordeon__symbol {
-    background-color: blueviolet;
+    background-color: black;
+    width: 20px;
+    height: 5px;
+    transition: 0.5s;
 }
 
 .accordeon__item:hover .accordeon__img {
     display: block;
+    transition: 0.5s;
 }
 
 .accordeon__img {
@@ -26,13 +52,15 @@
 }
 
 .accordeon__symbol {
-    background-color: aqua;
-    width: 30px;
-    height: 30px;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
 }
 
 input[name="text"]:checked~.accordeon__img {
     display: block;
+    transition: 0.5s;
 }
 
 input {
@@ -40,7 +68,10 @@ input {
 }
 
 input[name="text"]:checked~.accordeon__wrapper .accordeon__symbol {
-    background-color: blueviolet;
+    background-color: black;
+    width: 20px;
+    height: 5px;
+    transition: 0.3s;
 }
 
 label:before {
@@ -48,5 +79,6 @@ label:before {
     display: block;
     width: 100%;
     height: 1px;
-    background-color: black
+    background-color: black;
+    transition: 0.3s;
 }
