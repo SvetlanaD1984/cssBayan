@@ -15,9 +15,17 @@
                             width: 100%;
                             max-width: 1700px;
                             margin: 0 auto;
+                        }
+                        
+                        .inner {
                             display: flex;
                             align-items: center;
                             flex-direction: column;
+                        }
+                        
+                        .title {
+                            margin-top: 50px;
+                            margin-bottom: 20px;
                         }
                         
                         .accordeon {
@@ -28,6 +36,8 @@
                             cursor: pointer;
                             text-decoration: none;
                             color: blue;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
                         }
                         
                         .accordeon__wrapper {
@@ -107,11 +117,38 @@
                             .container {
                                 padding: 0 50px;
                             }
+                            .title {
+                                font-size: 25x;
+                            }
+                            .accordeon__title {
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                            .accordeon__item:hover .accordeon__symbol {
+                                width: 10px;
+                                height: 3px;
+                            }
+                            .accordeon__item:hover .accordeon__img {
+                                width: 150px;
+                                height: 150px;
+                            }
                         }
                         /* MOBILE 320px*/
                         
                         @media (max-width: 320px) {
                             .container {
                                 padding: 0 25px;
+                            }
+                            .title {
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                            .accordeon__item:hover .accordeon__symbol {
+                                width: 10px;
+                                height: 3px;
+                            }
+                            .accordeon__item:hover .accordeon__img {
+                                width: 100px;
+                                height: 100px;
                             }
                         }
