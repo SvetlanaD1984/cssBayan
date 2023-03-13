@@ -1,0 +1,154 @@
+                        body {
+                            margin: 0;
+                            font-family: "Inika", serif;
+                        }
+                        
+                        p,
+                        h1,
+                        h2,
+                        h3 {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        .container {
+                            width: 100%;
+                            max-width: 1700px;
+                            margin: 0 auto;
+                        }
+                        
+                        .inner {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                        
+                        .title {
+                            margin-top: 50px;
+                            margin-bottom: 20px;
+                        }
+                        
+                        .accordeon {
+                            width: 500px;
+                        }
+                        
+                        .accordeon__title {
+                            cursor: pointer;
+                            text-decoration: none;
+                            color: blue;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                        
+                        .accordeon__wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        
+                        .accordeon__img_wrapper {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        .accordeon__item:hover .accordeon__title {
+                            color: black;
+                        }
+                        
+                        .accordeon__item:hover .accordeon__symbol {
+                            background-color: black;
+                            width: 20px;
+                            height: 5px;
+                            transition: 0.5s;
+                        }
+                        
+                        .accordeon__item:hover .accordeon__img {
+                            display: block;
+                            transition: 0.5s;
+                            width: 200px;
+                            height: 200px;
+                        }
+                        
+                        .accordeon__img {
+                            display: none;
+                            height: 0px;
+                            width: 0px;
+                            transition: 0.5s;
+                        }
+                        
+                        .accordeon__symbol {
+                            background-color: green;
+                            width: 20px;
+                            height: 20px;
+                            transition: 0.5s;
+                        }
+                        
+                        input[name="text"]:checked~.accordeon__img {
+                            display: block;
+                            width: 100px;
+                            height: 100px;
+                        }
+                        
+                        input {
+                            display: none;
+                        }
+                        
+                        input[name="text"]:checked~.accordeon__wrapper .accordeon__symbol {
+                            background-color: black;
+                            width: 20px;
+                            height: 5px;
+                        }
+                        
+                        input[name="text"]:checked~.accordeon__wrapper .accordeon__title {
+                            color: black;
+                        }
+                        
+                        label:before {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: black;
+                            color: black;
+                        }
+                        /* TABLET  820px*/
+                        
+                        @media (max-width: 820px) {
+                            .container {
+                                padding: 0 50px;
+                            }
+                            .title {
+                                font-size: 25x;
+                            }
+                            .accordeon__title {
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                            .accordeon__item:hover .accordeon__symbol {
+                                width: 10px;
+                                height: 3px;
+                            }
+                            .accordeon__item:hover .accordeon__img {
+                                width: 150px;
+                                height: 150px;
+                            }
+                        }
+                        /* MOBILE 320px*/
+                        
+                        @media (max-width: 320px) {
+                            .container {
+                                padding: 0 25px;
+                            }
+                            .title {
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                            .accordeon__item:hover .accordeon__symbol {
+                                width: 10px;
+                                height: 3px;
+                            }
+                            .accordeon__item:hover .accordeon__img {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
